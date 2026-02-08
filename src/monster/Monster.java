@@ -1,19 +1,32 @@
+/** Project: Lab 2
+ * Purpose Details: Same type of attributes of all Monsters combined
+ * Course: IST 242
+ * Author: Krish Trivedi
+ * Date Developed: 2/2/2026
+ * Last Date Changed:2/8/26
+ * Rev:
+
+ */
+
 package monster;
 
 public abstract class Monster {
 
     private String name;
     private double height;
-    private String SkinColor;
+    private Color skinColor;
     private double weight;
-    private String power;
+    private int age;
+    private double health;
 
-    public Monster(String name, double height, String skinColor, double weight, String power) {
+
+    public Monster(String name, double height, double weight, Color skinColor, int age, double health) {
         this.name = name;
         this.height = height;
-        SkinColor = skinColor;
+        this.skinColor = skinColor;
         this.weight = weight;
-        this.power = power;
+        this.age = age;
+        this.health = health;
     }
 
 
@@ -33,13 +46,12 @@ public abstract class Monster {
         this.height = height;
     }
 
-
-    public String getSkinColor() {
-        return SkinColor;
+    public Color getSkinColor() {
+        return skinColor;
     }
 
-    public void setSkinColor(String skinColor) {
-        this.SkinColor = skinColor;
+    public void setSkinColor(Color skinColor) {
+        this.skinColor = skinColor;
     }
 
 
@@ -51,14 +63,24 @@ public abstract class Monster {
         this.weight = weight;
     }
 
-
-    public String getPower() {
-        return power;
+    public int getAge() {
+        return age;
     }
 
-    public void setPower(String power) {
-        this.power = power;
+    public void setAge(int age) {
+        this.age = age;
     }
 
+    public double getHealth() {
+        return health;
+    }
+
+    public void setHealth(double health) {
+        this.health = health;
+    }
+
+    /**
+     * Empty abstract class method to help list the behavior of a monster in other classes
+     */
     public void specialPower(){}
 }
